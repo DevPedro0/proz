@@ -1,0 +1,207 @@
+*{
+    color: #000;
+}
+
+:root {
+    --var-space-site-section: 0 15%;
+    --color-space-links: rgb(129, 129, 129);
+    --pixels-space-links: 0 10px 0 0;
+    --color-font-site: #000;
+    --pixels-nav-bar: 8px;
+    --box-ClickOver: 15px ;
+    --margin-input-section: 10px;
+    --header-section: 70vh;
+    --boxing-input: 22px;
+    --font-slider: 'Playfair Display';
+    --boxing-car-width: 320px;
+    --boxing-car-height: 420px;
+    --boxing-months: 250px;
+    --shadow-titles: 1px 2px 5px #000;
+    --color-boxing-months: ;
+    --border-radius-box: 5px 0 20px 0px ;
+    --border-radius-box2: 5px;
+    --color: #febd59; 
+    --color2: #ff65c3; 
+    --color3: #38b6ff; 
+    --color4: rgb(255, 87, 87); 
+}
+  
+
+section{
+    /* background-color: var(--color-font-site); */
+    padding: var(--var-space-site-section);
+    height: var(--header-section);
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.ctrl-section{
+    display: flex;
+    width: 100%;
+    justify-content: center ;    
+    height: 90%;
+    align-items: center;
+    overflow: hidden;
+    position:relative;
+}
+
+
+.section-car{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.section-car input{
+    display: none;
+}
+
+.section-car label {
+    margin: var(--padding-input-section);
+    width: var(--boxing-input);
+    height: var(--boxing-input);
+    border: none;
+    background-color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 10px #000;
+    transition: .6s ease all;
+    color: #fff;
+}
+
+.section-car label:hover{
+    transform: scale(1.3);
+    box-shadow: 2px 4px 15px #000;
+}
+
+
+
+.line-vertical{
+    display: flex;
+    width: 3px;
+    height: 60px;
+    background:#000 ;
+    margin: 3px;
+    border-radius: 10000px;
+}
+
+/* Parte do Carrossel */
+
+.carrossel{
+    width: 50%;
+    /* background-color: #000; */
+    margin: 1px;
+    height: 70%;
+    display: flex;
+}
+.carrossel:nth-last-child(odd){
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.ctrl-carrossel{
+    display: flex;
+    width: 100%;
+    padding: 5px 10px;
+    flex-direction: column;
+}
+
+.ctrl-carrossel h1{
+    font-size: 8rem;
+    color: #000;
+    font-weight: bold;
+    text-shadow: var(--shadow-titles);
+    font-family: var(--font-slider);
+}
+:is(h1, p){
+    text-align: justify;
+
+}
+
+.ctrl-carrossel-func{
+    display: flex;
+    width: 100%;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+}   
+
+.boxing-car{
+    width: var(--boxing-car-width);
+    height: var(--boxing-car-height);
+    background: var(--color-font-site);
+    border-radius: var(--border-radius-box);
+    padding: 2px;
+    margin: 5px;
+    box-shadow:1px 2px 6px #000;
+    /* background-image: url(https://www.juegostudio.com/wp-content/uploads/2024/02/2d-3d-game-art-style-integration-in-video-games.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.boxing-car:hover{
+    transform: scale3d(1.1, 1.1, 1.5);
+}
+
+
+/* Boxing Months */
+
+.boxing-months{
+    width: var(--boxing-months);
+    height: var(--boxing-months);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--back-box);
+    margin: 20px 5px;
+    border-radius: var(--border-radius-box2) ;
+    background-color: var(--color-font-site);
+    box-shadow: 1px 1px 5px 1px #000;
+}
+
+.container-months{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: var(--var-space-site-section);
+    justify-content: end;
+    background-color: #e6e6e633;
+}
+
+
+.left{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+.left h1{
+    font: bold 7rem var(--font-slider);
+    text-shadow: var(--shadow-titles);
+}
+
+.boxing-months h1{
+    color: #fff;
+}
+.ctrl-container-box {
+    display: flex;
+    padding: var(--var--space-site);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }

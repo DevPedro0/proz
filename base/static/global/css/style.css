@@ -1,3 +1,130 @@
-body{
-    background-color: aquamarine;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --var--space-site: 0 25%;
+  --color-space-links: rgb(129, 129, 129);
+  --pixels-space-links: 0 10px 0 0;
+  --color-font-site: #000;
+  /* --link-background-body: url(https://t4.ftcdn.net/jpg/05/56/35/59/360_F_556355907_aXrsnyWJmmwJMS8f5727M47tp91YVRC8.jpg) ; */
+  --pixels-nav-bar: 8px;
+  --box-ClickOver: 15px ;
+}
+
+body {
+  overflow-x: hidden;
+  /* background-image: var(--link-background-body); */
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+}
+
+.ctrl-container {
+  display: flex;
+  padding: var(--var--space-site);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+:is(ul, li, a, h1) {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--color-font-site);
+}
+
+.Logotype {
+  max-width: 300px;
+  padding: 0 30px 0 0;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.ContainerLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.link a::after {
+  content: "";
+  display: flex;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 1.2s ease all;
+  width: 0%;
+}
+.link::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-space-links);
+  position: relative;
+  margin: var(--pixels-space-links);
+}
+.link a:hover::after {
+  width: 100%;
+}
+
+/* Menu Options */
+
+#clickover{
+    display: flex;
+    width: var(--box-ClickOver);
+    height: var(--box-ClickOver);
+    position: relative;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 0 0 7px;
+}
+
+
+.Line45Deg{
+    background: var(--color-font-site);
+    width: 20px;
+    height: 1px;
+    transform: skew(0deg, 45deg);
+}
+
+.Line45DegFrontal{
+    background: var(--color-font-site);
+    width: 20px;
+    height: 1px;
+    transform: skew(0deg, 135deg);
+}
+
+
+.Ocult{
+    display: none;
+    padding: var(--var--space-site);
+    background-color: var(--color-font-site);
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    transition: 1.2s ease all;
+}
+
+.ctlr-Ocult{
+    color: #fff;
 }

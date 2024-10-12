@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import ret
+from .views import TestFaker
 
 
 urlpatterns = [
-    path('', ret ),
+    path('', TestFaker.NoticiasFaker),
     
 ]
