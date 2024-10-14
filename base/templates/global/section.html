@@ -1,0 +1,91 @@
+{% include "global/head.html" %}
+
+
+{% block Section %}
+<section class="" id="img-alter">
+    <!-- <div class="section-func"></div> -->
+    
+    <div class="ctrl-section">
+        <div class="section-car">
+            <input type="radio" name="car" id="wellow" checked>
+            <input type="radio" name="car" id="pink">
+            <input type="radio" name="car" id="blue">
+            <input type="radio" name="car" id="red">
+            <input type="radio" name="car" id="final">
+        
+            <div class="section-car">
+                <label for='wellow' id="wellow1">1</label>
+                <div class="line-vertical"></div>
+                <label for='pink' id="pink1">2</label>
+                <div class="line-vertical"></div>
+                <label for='blue' id="blue1">3</label>
+                <div class="line-vertical"></div>
+                <label for='red' id="red1">4</label>
+                <div class="line-vertical"></div>
+                <label for='final' id="final1">5</label>
+                
+            </div>
+        </div>
+        
+        <div class="carrossel">
+            <div class="ctrl-carrossel">
+                <h1>Slider</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero ea ab totam fugiat at itaque tempora quis nam adipisci dicta, atque tempore nulla ipsam possimus unde dolorem. Adipisci, eius!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero ea ab totam fugiat at itaque tempora quis nam adipisci dicta, atque tempore nulla ipsam possimus unde dolorem. Adipisci, eius!
+                </p>
+            </div>
+        </div>
+        <div class="carrossel">
+            <div class="ctrl-carrossel-func">
+                <div class="hidden">
+                    <div id="img1" class="boxing-car">
+                        
+                    </div>
+                    <div id="img2" class="boxing-car">
+                        
+                    </div>
+                    <div id="img3" class="boxing-car">
+                        
+                    </div>
+                    <div id="img4" class="boxing-car">
+                        
+                    </div>
+                    <div id="img5" class="boxing-car">
+                </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock Section %}
+
+{% block BlockMonths %}
+        <div class="container-months">
+            <div class="ctrl-months" style="width: 100%;">
+                <div class="left">
+                    <h1>
+                        Grupos
+                    </h1>
+                </div>
+                <div class="ctrl-container-box", style="padding: 0;">
+                    <div class="boxing-car boxing-months">
+                        <h1>Setembro</h1>
+                    </div>
+                    <div class="boxing-car boxing-months">
+                        <h1>Outubro</h1>
+                    </div>
+                    <div class="boxing-car boxing-months">
+                        <h1>Novembro</h1>
+                    </div>
+                    <div class="boxing-car boxing-months">
+                        <h1>Dezembro</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+{% endblock BlockMonths %}

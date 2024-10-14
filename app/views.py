@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+    
+class Podcasts:
+    @staticmethod
+    def PodCast(requests):
+        return render(
+            requests,
+            'app/podcast.html'
+        )

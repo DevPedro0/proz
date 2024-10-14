@@ -1,0 +1,63 @@
+{% include "global/head.html" %}
+
+{% block Header %}
+        <div class="container">
+            <div class="ctrl-container">
+                <div class="Logotype">
+                    <h1>Logotipo</h1>
+                </div>
+                <div class="ContainerLinks">
+                    <ul>
+                        <li class="link">
+                            <a href="http://127.0.0.1:8000/">Home</a>
+                        </li>
+                        <li class="link">
+                            <a href="#" id="options-meses">Meses</a>
+                            <button type="button" onclick="FuncHomePage()" id="clickover">
+                                <div class="Line45Deg"></div>
+                                <div class="Line45DegFrontal"></div>
+                            </button>
+                        </li>
+                        <li class="link">
+                            <a href="#">Contatos</a>
+                        </li>
+                        <li class="link">
+                            <a href="#">Enquetes</a>
+                        </li>
+                        <li class="link">
+                            <a href="http://127.0.0.1:8000/app/podcast">Podcasts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="Ocult">
+            <div class="ctlr-Ocult">
+                <div class="boxing september">
+                    <h1>Title</h1>
+                    <div>
+                        <a href="../september/">Clique Me</a>
+                    </div>
+                </div>
+                <div class="boxing octuber">
+                    <h1>Title</h1>
+                    <div>
+                        <a href="#">Clique Me</a>
+                    </div>
+                </div>
+                <div class="boxing november">
+                    <h1>Title</h1>
+                    <div>
+                        <a href="#">Clique Me</a>
+                    </div>
+                </div>
+                <div class="boxing dezembro">
+                    <h1>Title</h1>
+                    <div>
+                        <a href="#">Clique Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock Header %}

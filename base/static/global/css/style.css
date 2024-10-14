@@ -13,6 +13,9 @@
   /* --link-background-body: url(https://t4.ftcdn.net/jpg/05/56/35/59/360_F_556355907_aXrsnyWJmmwJMS8f5727M47tp91YVRC8.jpg) ; */
   --pixels-nav-bar: 8px;
   --box-ClickOver: 15px ;
+  --var--space-header-block: 0 15%;
+
+
 }
 
 body {
@@ -116,15 +119,37 @@ body {
 
 
 .Ocult{
-    display: none;
-    padding: var(--var--space-site);
-    background-color: var(--color-font-site);
+    display: flex;
+    padding: var(--var--space-header-block);
+    /* background-color: var(--color-font-site); */
     width: 100vw;
-    height: 10vh;
     position: absolute;
     transition: 1.2s ease all;
+    align-items: center;
+    height: 240px;
+    z-index: 999;
+    justify-content: center;
 }
 
 .ctlr-Ocult{
     color: #fff;
+    display: flex;
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    /* background: var(--color-font-site); */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.boxing{
+  width:300px ;
+  background: red;
+  padding: 10px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 10px;
 }

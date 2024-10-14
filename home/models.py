@@ -10,3 +10,21 @@ class FakeNews(models.Model):
     
     def __str__(self):
         return str(self.title)
+
+
+class Sugestions(models.Model):
+    
+    THEMES_CHOICES  = [
+        ("A", "Arnold"),
+        ('B', "Beraldo")
+    ]    
+    
+    sugestions = models.TextField()
+    name = models.CharField(max_length=50)
+    themes_default = models.CharField(
+        max_length=30,
+        unique= True,
+        choices= THEMES_CHOICES
+    )
+    
+    

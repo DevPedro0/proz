@@ -1,0 +1,36 @@
+{% include "global/head.html" %}
+
+{% block news %}
+    <section class="news-section">
+        <h1 class="news-title">Proz <span>News</span></h1>
+
+        <article class="news-article">
+            <h2 class="article-title">{{noticia.title}}</h2>
+            <p class="article-content">Resumo da notícia 1. Aqui você pode incluir detalhes relevantes ou uma introdução interessante.</p>
+            <p>{{noticia.author}} - {{noticia.dat}}</p>
+        </article>
+
+        <article class="news-article">
+            <h2 class="article-title">{{noticia.title}}</h2>
+            <p class="article-content">Resumo da notícia 2. Aqui você pode incluir detalhes relevantes ou uma introdução interessante.</p>
+            <p>{{noticia.author}} - {{noticia.dat}}</p>
+        </article>
+
+        <article class="news-article">
+            <h2 class="article-title">{{noticia.title}}</h2>
+            <p class="article-content">Resumo da notícia 3. Aqui você pode incluir detalhes relevantes ou uma introdução interessante.</p>
+            <p>{{noticia.author}} - {{noticia.dat}}</p>
+        </article>
+
+        <article class="news-article">
+            <h2 class="article-title">{{noticia.title}}</h2>
+            <p class="article-content">Resumo da notícia 4. Aqui você pode incluir detalhes relevantes ou uma introdução interessante.</p>
+            <p>{{noticia.author}} - {{noticia.dat}}</p>
+        </article>
+            <article class="news-article">
+                <h2 class="article-title">{{noticia.title}}</h2>
+                <p class="article-content">Resumo da notícia 4. Aqui você pode incluir detalhes relevantes ou uma introdução interessante.</p>
+                <p>{{noticia.author}} - {{noticia.dat}}</p>
+            </article>
+    </section>
+{% endblock news %}
