@@ -1,20 +1,8 @@
-:root {
-    --var-space-site-section: 0 15%;
-    --color-space-links: rgb(129, 129, 129);
-    --color-font-site: #000;
-    --color-background: #f9f9f9; /* Fundo claro para a seção de notícias */
-    --color-white: #fff; /* Branco para artigos */
-    --shadow-titles: 1px 2px 5px rgba(0, 0, 0, 0.1);
-    --space-news: 100vh;
-}
-
-
-
 .news-section {
     padding: var(--var-space-site-section);
     background-color: var(--color-background);
     border-radius: 5px; /* Bordas arredondadas para a seção */
-    box-shadow: var(--shadow-titles);
+    box-shadow: var(--box-shadow-section);
     display: flex;
     flex-direction: column;
     height: var(--space-news);
@@ -34,7 +22,7 @@
     border-radius: 5px;
     padding: 15px;
     margin: 10px 0;
-    box-shadow: var(--shadow-titles);
+    box-shadow: var(--box-shadow-section);
 }
 
 .article-title {

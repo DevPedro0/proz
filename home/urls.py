@@ -1,8 +1,8 @@
-from django.urls import path, include
-from .views import HomePage, Months
+from django.urls import path
+from .views import HomePage, Months, Contact
 
 urlpatterns = [
     path('', HomePage.NoticiasFaker),
-    path('sugestions/', HomePage.Sugestions, name='september'),
+    path('contact/', Contact.contact, name='contact'),
     path('september/', Months.September),
 ]   

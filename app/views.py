@@ -8,3 +8,10 @@ class Podcasts:
             requests,
             'app/podcast.html'
         )
+        
+        
+def Canais(requests):
+    return render(
+        requests,
+        'app/canais.html'
+    )

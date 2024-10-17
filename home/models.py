@@ -27,4 +27,6 @@ class Sugestions(models.Model):
         choices= THEMES_CHOICES
     )
     
-    
+
+class Locals(models.Model):
+    local = models.CharField(max_length=50)

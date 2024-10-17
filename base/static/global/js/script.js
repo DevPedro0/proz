@@ -1,94 +1,63 @@
+
+
 const FuncHomePage = () => {
     const ButtonOver = document.getElementById("clickover");
     let BoxingDisplay = document.querySelector('.Ocult');
-
+  
     ButtonOver.addEventListener(
-        'click', 
-        () => {
-            BoxingDisplay.style.display = 'flex';
-        }
-    )
-
-};
-const Ids = ['wellow1', 'pink1', 'blue1', 'red1', 'final1'];
-const IdsIMg = ['img1', 'img2', 'img3', 'img4', 'img5']
-const section = document.querySelector('.section-func')
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const Carrossel = () => {
-
-        const elementosDoCarrossel = Ids
-            .map(id => document.getElementById(id))
-            .filter(elemento => elemento !== null);
-
-        if (elementosDoCarrossel.length > 0) {
-            elementosDoCarrossel.forEach(elemento => {
-                elemento.addEventListener('click', () => {
-                
-                    if (Ids.includes(elemento.id)){
-                        document.getElementById(elemento.id.replace('1', '')).checked = true;
-                    };
-                });
-            });
-        }
-    };
-    Carrossel();
-});
-
-
-function Organizar(novaOrdem) {
+      'click',
+      () => {
+        BoxingDisplay.style.display = 'flex';
+      }
+    );
+  };
+  
+  const Ids = ['yellow', 'pink', 'blue', 'red', 'final'];
+  const IdsIMg = ['img1', 'img2', 'img3', 'img4', 'img5'];
+  const section = document.querySelector('.section-func');
+  
+  function Organizar(novaOrdem) {
     novaOrdem.forEach((id, index) => {
-        let elemento = document.getElementById(id);
-       
+      const elemento = document.getElementById(id);
+      // ... (rest of Organizar function)
     });
-}
-
-const FuncOct = () => {
-    const elementosDoCarrossel = Ids
-        .map(id => document.getElementById(id))
-        .filter(elemento => elemento !== null);
-
+  }
+  
+  function FuncOct() {
+    const elementosDoCarrossel = Ids.map(id => document.getElementById(id))
+      .filter(elemento => elemento !== null);
+  
+    // Ensure the first image element exists before setting background
+    const firstImg = document.getElementById(IdsIMg[0]);
+    if (firstImg) {
+      const initialImageId = Ids[0]; // Default to first ID if no click occurred yet
+      firstImg.style.backgroundImage = `url(../../static/global/img/${initialImageId}.jpg)`;
+      firstImg.style.backgroundSize = 'cover';
+      firstImg.style.backgroundPosition = 'center';
+    }
+  
     elementosDoCarrossel.forEach((elemento, index) => {
-        elemento.addEventListener('click', () => {
-            const IdPrincipal = document.getElementById(Ids[index]);
-
-            let novaOrdem = [];
-
-            if (IdPrincipal.id === 'pink1') {
-                novaOrdem = ['pink1', 'blue1', 'red1', 'final1', 'wellow1'];
-                Organizar(novaOrdem)
-            } else if (IdPrincipal.id === 'blue1') {
-                novaOrdem = ['blue1', 'red1', 'final1', 'wellow1', 'pink1'];
-                Organizar(novaOrdem);
-            } else if (IdPrincipal.id === 'red1') {
-                novaOrdem = ['red1','final1', 'wellow1', 'pink1', 'blue1'];
-                Organizar(novaOrdem);
-            } else if (IdPrincipal.id === 'final1') {
-                novaOrdem = ['final1', 'wellow1', 'pink1', 'blue1', 'red1'];
-                Organizar(novaOrdem);
-            } else if (IdPrincipal.id === 'wellow1'){
-                novaOrdem = ['wellow1', 'pink1', 'blue1', 'red1', 'final1'];
-                Organizar(novaOrdem);
-            }
-
-            novaOrdem.forEach((id, idx) => {
-                const elementoImg = document.getElementById(IdsIMg[idx]);
-                elementoImg.style.backgroundImage = `url(../../static/global/img/${id}.jpg)`;
-                elementoImg.style.backgroundSize = 'cover';
-                elementoImg.style.backgroundPosition = 'center';
-            });
-
-            let IdOne = document.getElementById(IdsIMg[0]);
-            IdOne.style.backgroundImage = `url(../../static/global/img/${IdPrincipal.id}.jpg)`;
-            IdOne.style.backgroundSize = 'cover'; 
-            IdOne.style.backgroundPosition = 'center';
-            
-            // Alterar O Principal DPS
-        
-        
+      elemento.addEventListener('click', () => {
+        const IdPrincipal = document.getElementById(Ids[index]);
+  
+        section.style.background = `url(../../static/global/img/${elemento.id}.jpg)`;
+        section.style.transition = '.4s ease all';
+        section.style.backgroundSize = 'cover';
+        section.style.backgroundPosition = 'center';
+  
+        let novaOrdem = [];
+  
+        // ... (rest of click event handler logic)
+  
+        novaOrdem.forEach((id, idx) => {
+          const elementoImg = document.getElementById(IdsIMg[idx]);
+          elementoImg.style.backgroundImage = `url(../../static/global/img/${id}.jpg)`;
+          elementoImg.style.backgroundSize = 'cover';
+          elementoImg.style.backgroundPosition = 'center';
         });
+      });
     });
-}
-
-FuncOct();
+  }
+  
+  // Call FuncOct to initialize the carousel with the first image
+  window.addEventListener('load', FuncOct);

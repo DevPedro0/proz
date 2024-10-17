@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import FakeNews
+from .models import FakeNews, Locals
 from datetime import datetime
 from faker import Faker
+
 
 class HomePage:
     
@@ -31,26 +32,37 @@ class HomePage:
             content = content,
             local = local
         )
-                 
+        
         return render(
                 requests, 
                 'home/index.html', 
                 {'noticia': noticia} # Context
         )
-            
-    @staticmethod
-    def Sugestions(requests):
-        return render(
-            requests,
-            'home/sugestions.html'
-    )
     
 class Months:
     @staticmethod
-    def September(requests):
-        
+    def September(requests):        
         return render(
             requests,
-            'home/september.html'
+            'home/september.html',
+          
+        )
+    
+class Contact:
+    
+    @staticmethod
+    def contact(request):
+        
+        fake = Faker('pt-BR')  # Corrigido para 'pt-BR', que é o formato correto para Faker
+        local = fake.administrative_unit()
+        
+        localFinal = Locals.objects.create(
+            local=local
+        )
+        
+        return render(
+            request,  # Corrigido para "request"
+            'home/contact.html',
+            {'localfinal': localFinal}
         )
     

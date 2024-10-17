@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+    {% include "../global/head.html" %}
+
+    <body class="body-contact">
+        {% include "../global/header.html" %}
+
+        <div class="container-contact">
+            <div class="ctrl-container ctrl-container-contact">
+                <div class="background-img"></div>
+
+                <div class="boxing-content">
+                    <div class="ctrl-content">
+                        <h1 class="contact-us">Contact Us</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing p>
+                    </div>
+
+                    <!-- Box Firs and Last Name -->
+                    <div class="box-space-buttons">
+
+                        <div class="form-contact-line1 box-line">
+                            <div class="box-content">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" id="firstname" placeholder="First Name">
+                            </div>
+                            <div class="box-content">
+                                <label for="firstname">Last Name:</label>
+                                <input type="text" id="firstname" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <!-- Box Email -->
+                        <div class="box-line form-contact-line2">
+                            <div class="box-content space-100">
+                                <label for="email">E-Mail</label>
+                                <input type="text" id="email" placeholder="E-Mail">
+                            </div>
+                        </div>
+                        <div class="box-line form-contact-line2">
+                            <div class="box-content space-100">
+                                <label for="email">Notes:</label>
+                                <input type="text" id="email" placeholder="Notes">
+                            </div>
+                        </div>
+
+                        <div class="box-line form-contact-line2">
+                            <div class="box-content space-100">
+                                <label for="email">Cidade</label>
+                                <select name="" id="select-country" >
+                                    <option value="Value1">Value 1</option>
+                                    <option value="Value2">Value 2</option>
+                                    <option value="Value3">Value 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-line form-contact-line2">
+                            <div class="box-content space-100">
+                                <label for="email">Job:</label>
+                                <input type="text" id="email" placeholder="Job">
+                            </div>
+                        </div>
+
+                        <div class="box-line form-contact-line2">
+                            <div class="box-content space-100">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+
+    <script src="{% static 'global/js/script.js' %}"></script>
+
+</html>
