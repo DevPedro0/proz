@@ -1,6 +1,6 @@
 from django.db import models
 
-class FakeNews(models.Model):
+class ProzNews(models.Model):
     
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=100)
@@ -30,3 +30,50 @@ class Sugestions(models.Model):
 
 class Locals(models.Model):
     local = models.CharField(max_length=50)
+    
+  # models.py
+from django.db import models
+
+# models.py
+from django.db import models
+
+class Formulario(models.Model):
+    ESTADOS_BRASIL = [
+        ('AC', 'Acre'),
+        ('AL', 'Alagoas'),
+        ('AP', 'Amapá'),
+        ('AM', 'Amazonas'),
+        ('BA', 'Bahia'),
+        ('CE', 'Ceará'),
+        ('DF', 'Distrito Federal'),
+        ('ES', 'Espírito Santo'),
+        ('GO', 'Goiás'),
+        ('MA', 'Maranhão'),
+        ('MT', 'Mato Grosso'),
+        ('MS', 'Mato Grosso do Sul'),
+        ('MG', 'Minas Gerais'),
+        ('PA', 'Pará'),
+        ('PB', 'Paraíba'),
+        ('PR', 'Paraná'),
+        ('PE', 'Pernambuco'),
+        ('PI', 'Piauí'),
+        ('RJ', 'Rio de Janeiro'),
+        ('RN', 'Rio Grande do Norte'),
+        ('RS', 'Rio Grande do Sul'),
+        ('RO', 'Rondônia'),
+        ('RR', 'Roraima'),
+        ('SC', 'Santa Catarina'),
+        ('SP', 'São Paulo'),
+        ('SE', 'Sergipe'),
+        ('TO', 'Tocantins'),
+    ]
+
+    firstname = models.CharField(max_length=30)
+    lastname = models.CharField(max_length=50)
+    e_mail = models.EmailField(max_length=150)
+    notes = models.TextField()
+    cidade = models.CharField(max_length=2, choices=ESTADOS_BRASIL)
+    job = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.firstname} {self.lastname}'

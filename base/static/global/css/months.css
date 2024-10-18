@@ -1,6 +1,7 @@
 :root{
     --var-back-svg: url(../img/frame-4.png);
     --space-september: 500px;
+    --space-main: 80%;
 }
 .container-months-back{
     display: flex;
@@ -16,7 +17,7 @@
 .content-center{
     display: flex;
     width: 40%;
-    height: 80%;
+    height: var(--space-main);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -33,6 +34,7 @@
 }
 .title{
     font-size: var(--var-font-contact-us);
+    background-color: #000;
 }
 
 .right-box{

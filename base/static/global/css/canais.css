@@ -1,0 +1,66 @@
+:root{
+    --background-yellow-canais: rgb(249, 255, 161);
+}
+
+.content-center[name = 'content-canais']{
+    /* background-color: red; */
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #f3f3f369;
+    box-shadow: var(--box-shadow-section);
+    border-radius: 20px;
+}
+
+.container[name = 'content-canais']{
+    height: 94vh;
+    padding: 0 25%;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: var(--shadow-titles);
+}
+
+thead {
+    background-color: var(--background-yellow-canais);
+    color: #000;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #dddddd42;
+}
+
+.log-others-site{
+    background-color: var(--background-yellow-canais);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0;
+    color: #000;
+    font-weight: 500;
+}
+
+.contact-us[name = 'title-canais']{
+    font-size: 2rem;
+}
+.boxing-canais :is(h1, p) {
+    padding: 15px;
+}

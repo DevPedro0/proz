@@ -1,42 +1,16 @@
-from django.shortcuts import render
-from .models import FakeNews, Locals
+from django.shortcuts import render, redirect
+from .models import ProzNews, Locals
 from datetime import datetime
-from faker import Faker
-
+from .form import FormularioForm
 
 class HomePage:
     
     @staticmethod
     def NoticiasFaker(requests):
         
-        name = set()
-        fake = Faker('pt-BR')
-        
-        title = fake.catch_phrase()
-        
-       
-        if title in name:
-            title = fake.catch_phrase()
-        else:
-            title = fake.catch_phrase()
-            author = fake.name()
-            dat = datetime.today().date()
-            content = fake.paragraph(nb_sentences=5)
-            local = fake.administrative_unit()
-            
-            
-        noticia = FakeNews.objects.create(
-            title = title,
-            author = author,
-            dat = dat,
-            content = content,
-            local = local
-        )
-        
         return render(
                 requests, 
                 'home/index.html', 
-                {'noticia': noticia} # Context
         )
     
 class Months:
@@ -47,22 +21,21 @@ class Months:
             'home/september.html',
           
         )
-    
+
 class Contact:
     
     @staticmethod
     def contact(request):
-        
-        fake = Faker('pt-BR')  # Corrigido para 'pt-BR', que é o formato correto para Faker
-        local = fake.administrative_unit()
-        
-        localFinal = Locals.objects.create(
-            local=local
-        )
-        
+        if request.method == 'POST':
+            form = FormularioForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('http://127.0.0.1:8000/app/enquetes/')  # Redireciona para a página correta
+        else:
+            form = FormularioForm()
+
         return render(
-            request,  # Corrigido para "request"
-            'home/contact.html',
-            {'localfinal': localFinal}
+            request,  
+            'home/contact.html',  # Template correto
+            {'localfinal': form}
         )
-    

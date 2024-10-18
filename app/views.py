@@ -15,3 +15,10 @@ def Canais(requests):
         requests,
         'app/canais.html'
     )
+    
+
+def Enquetes(requests):
+    return render(
+        requests,
+        'app/enquetes.html'
+    )
