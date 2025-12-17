@@ -22,7 +22,7 @@ Nenhuma funcionalidade de **exfiltração**, **web scraping** ou envio remoto de
 
 Quando o projeto é executado, ocorre o seguinte fluxo lógico:
 
-0. Primeiramente, deve-se criar o ambiente virtual (`venv`) -> Rode o seguinte: (*py -m venv venv*) e siga sua respectiva ativação no dirétirio do Ambiente Virtual (*venv\scripts\activate*)
+0. Primeiramente, deve-se criar o ambiente virtual (`venv`) -> Rode o seguinte: (*py -m venv venv*) e siga sua respectiva ativação no diretório do Ambiente Virtual (*venv\scripts\activate*)
   **OBS** Necessita de python Instalado <https://www.python.org/> para Instalação do Python;
   **OBS** Arquivo (`requirements.txt`) Obtém todas as Funcionalidades do Projeto, logo, após o Ambiente Virtual ser ativado, faça (*pip install -r requirements.txt*)
 
